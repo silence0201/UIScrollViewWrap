@@ -374,14 +374,8 @@ static NSString *const cellIdentifier = @"CellID" ;
         }] ;
     }
     
-    // 计算交给Cell处理
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId] ;
-    if (cell) {
-        return [cell cellHeightInTableView:tableView withModel:model] ;
-    }
-    
-    // 默认返回44
-    return 44.0f ;
+    // 计算交给Cell处理,默认返回44.0f
+    return [UITableViewCell cellHeightInTableView:tableView withModel:model] ;
 }
 
 // 头的高度

@@ -158,7 +158,7 @@ static char superTableViewKey ;
     return [self si_quickGetAssociatedValueForKey:&modelKey] ;
 }
 
-- (CGFloat)cellHeightInTableView:(UITableView *)tableView withModel:(id)model {
++ (CGFloat)cellHeightInTableView:(UITableView *)tableView withModel:(id)model {
     return 44.0 ;
 }
 
