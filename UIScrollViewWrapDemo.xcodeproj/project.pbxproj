@@ -26,6 +26,8 @@
 		E8D5EAC61E8A1D240006BA7C /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */; };
 		E8D5EACA1E8A3EC80006BA7C /* UICollectionViewCell+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAC91E8A3EC80006BA7C /* UICollectionViewCell+Model.m */; };
 		E8D5EACD1E8A45240006BA7C /* UICollectionView+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EACC1E8A45240006BA7C /* UICollectionView+Model.m */; };
+		E8D5EAD11E8A5F400006BA7C /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAD01E8A5F400006BA7C /* CustomCollectionViewCell.m */; };
+		E8D5EAD41E8A5FE80006BA7C /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAD31E8A5FE80006BA7C /* CollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,10 @@
 		E8D5EACB1E8A45240006BA7C /* UICollectionView+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Model.h"; sourceTree = "<group>"; };
 		E8D5EACC1E8A45240006BA7C /* UICollectionView+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Model.m"; sourceTree = "<group>"; };
 		E8D5EACE1E8A4E7C0006BA7C /* UICollectionWrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionWrap.h; sourceTree = "<group>"; };
+		E8D5EACF1E8A5F400006BA7C /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
+		E8D5EAD01E8A5F400006BA7C /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
+		E8D5EAD21E8A5FE80006BA7C /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		E8D5EAD31E8A5FE80006BA7C /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +144,10 @@
 				E8317D261E8A0C3100926BB3 /* CustomTableViewCell.xib */,
 				E8D5EAC41E8A1D240006BA7C /* GroupViewController.h */,
 				E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */,
+				E8D5EACF1E8A5F400006BA7C /* CustomCollectionViewCell.h */,
+				E8D5EAD01E8A5F400006BA7C /* CustomCollectionViewCell.m */,
+				E8D5EAD21E8A5FE80006BA7C /* CollectionViewController.h */,
+				E8D5EAD31E8A5FE80006BA7C /* CollectionViewController.m */,
 			);
 			path = UIScrollViewWrapDemo;
 			sourceTree = "<group>";
@@ -320,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D5EAD41E8A5FE80006BA7C /* CollectionViewController.m in Sources */,
 				E8D5EAC61E8A1D240006BA7C /* GroupViewController.m in Sources */,
 				E8D5EACA1E8A3EC80006BA7C /* UICollectionViewCell+Model.m in Sources */,
 				E88AC1CB1E88D85000E450F6 /* UITableViewCell+Model.m in Sources */,
@@ -329,6 +340,7 @@
 				E88AC1C71E88CB8000E450F6 /* NSObject+SIQuickAssociated.m in Sources */,
 				E8317D171E8A077600926BB3 /* UIColor+Random.m in Sources */,
 				E8317D271E8A0C3100926BB3 /* CustomTableViewCell.m in Sources */,
+				E8D5EAD11E8A5F400006BA7C /* CustomCollectionViewCell.m in Sources */,
 				E8317D201E8A0A0F00926BB3 /* UIImage+Effect.m in Sources */,
 				E88AC1CE1E88ED2E00E450F6 /* UITableView+Model.m in Sources */,
 				E8317D231E8A0B0E00926BB3 /* CellClassViewController.m in Sources */,

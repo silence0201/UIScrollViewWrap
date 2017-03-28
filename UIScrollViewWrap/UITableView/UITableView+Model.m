@@ -420,7 +420,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     if (self.clearSelected) {
         [self deselectRowAtIndexPath:indexPath animated:YES] ;
     }
-    UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath] ;
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath] ;
     if (cell.selectedAction) {
         cell.selectedAction(indexPath) ;
     }

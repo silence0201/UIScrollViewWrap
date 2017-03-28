@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol SICollectionViewDelegate <UICollectionViewDelegate>
+@protocol SICollectionViewDelegate <UICollectionViewDelegateFlowLayout>
 @end
 
 @protocol SICollectionViewDataSource <UICollectionViewDataSource>

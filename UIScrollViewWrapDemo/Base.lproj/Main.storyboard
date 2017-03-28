@@ -53,6 +53,14 @@
                                     <segue destination="cHk-HC-41c" kind="show" id="Dx5-7J-NuU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQ8-Wf-O7b">
+                                <rect key="frame" x="83" y="502" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Collection"/>
+                                <connections>
+                                    <segue destination="YOT-o8-KTD" kind="show" id="A7b-nb-NT1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -79,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8y8-49-Mxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-683" y="862"/>
+            <point key="canvasLocation" x="183" y="774"/>
         </scene>
         <!--Cell数组-->
         <scene sceneID="ty1-xW-rbr">
@@ -155,6 +163,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Naw-3E-ROP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-793" y="114"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="cMr-15-4Qg">
+            <objects>
+                <viewController id="YOT-o8-KTD" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o8p-pQ-sPx"/>
+                        <viewControllerLayoutGuide type="bottom" id="BVP-Pr-m1a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Crr-Ix-VYV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPl-Oj-TZf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-706" y="833"/>
         </scene>
     </scenes>
 </document>

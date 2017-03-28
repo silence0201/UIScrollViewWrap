@@ -67,8 +67,5 @@ static char superCollectionViewKey ;
     return [self si_quickGetAssociatedValueForKey:&modelKey] ;
 }
 
-- (CGSize)cellSizeInCollectionView:(UICollectionView *)collectionView withModel:(id)model {
-    return CGSizeMake(50, 50) ;
-}
 
 @end
