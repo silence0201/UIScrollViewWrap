@@ -23,7 +23,7 @@ typedef void(^SelectBlock)(NSIndexPath *indexPath);
 /// 点击Cell回调Block
 @property(nonatomic,strong) SelectBlock selectedAction ;
 
-/// 计算行高,默认为44.重写该方法实现自定义行高
+/// 计算Size信息,默认返回Zero,需要重写改方法
 - (CGSize)cellSizeInCollectionView:(UICollectionView *)collectionView withModel:(id)model ;
 
 #pragma mark >>>>>>>> 常用数据  <<<<<<<<<
