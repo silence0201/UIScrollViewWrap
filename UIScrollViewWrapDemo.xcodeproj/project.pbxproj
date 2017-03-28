@@ -125,29 +125,12 @@
 		E88AC1AB1E88CAEB00E450F6 /* UIScrollViewWrapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5EAD51E8A66CF0006BA7C /* Class */,
 				E88AC1C31E88CB6800E450F6 /* UIScrollViewWrap */,
-				E88AC1AF1E88CAEB00E450F6 /* AppDelegate.h */,
-				E88AC1B01E88CAEB00E450F6 /* AppDelegate.m */,
-				E88AC1B21E88CAEB00E450F6 /* ViewController.h */,
-				E88AC1B31E88CAEB00E450F6 /* ViewController.m */,
 				E88AC1B51E88CAEB00E450F6 /* Main.storyboard */,
 				E88AC1B81E88CAEB00E450F6 /* Assets.xcassets */,
 				E88AC1BA1E88CAEB00E450F6 /* LaunchScreen.storyboard */,
-				E88AC1BD1E88CAEB00E450F6 /* Info.plist */,
 				E88AC1AC1E88CAEB00E450F6 /* Supporting Files */,
-				E8317D111E8A035E00926BB3 /* SystemStyleViewController.h */,
-				E8317D121E8A035E00926BB3 /* SystemStyleViewController.m */,
-				E8317D211E8A0B0E00926BB3 /* CellClassViewController.h */,
-				E8317D221E8A0B0E00926BB3 /* CellClassViewController.m */,
-				E8317D241E8A0C3100926BB3 /* CustomTableViewCell.h */,
-				E8317D251E8A0C3100926BB3 /* CustomTableViewCell.m */,
-				E8317D261E8A0C3100926BB3 /* CustomTableViewCell.xib */,
-				E8D5EAC41E8A1D240006BA7C /* GroupViewController.h */,
-				E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */,
-				E8D5EACF1E8A5F400006BA7C /* CustomCollectionViewCell.h */,
-				E8D5EAD01E8A5F400006BA7C /* CustomCollectionViewCell.m */,
-				E8D5EAD21E8A5FE80006BA7C /* CollectionViewController.h */,
-				E8D5EAD31E8A5FE80006BA7C /* CollectionViewController.m */,
 			);
 			path = UIScrollViewWrapDemo;
 			sourceTree = "<group>";
@@ -155,6 +138,7 @@
 		E88AC1AC1E88CAEB00E450F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E88AC1BD1E88CAEB00E450F6 /* Info.plist */,
 				E8317D1E1E8A0A0F00926BB3 /* UIImage+Effect.h */,
 				E8317D1F1E8A0A0F00926BB3 /* UIImage+Effect.m */,
 				E8317D151E8A077600926BB3 /* UIColor+Random.h */,
@@ -205,6 +189,30 @@
 				E8D5EACE1E8A4E7C0006BA7C /* UICollectionWrap.h */,
 			);
 			path = UICollection;
+			sourceTree = "<group>";
+		};
+		E8D5EAD51E8A66CF0006BA7C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				E8317D111E8A035E00926BB3 /* SystemStyleViewController.h */,
+				E8317D121E8A035E00926BB3 /* SystemStyleViewController.m */,
+				E8317D211E8A0B0E00926BB3 /* CellClassViewController.h */,
+				E8317D221E8A0B0E00926BB3 /* CellClassViewController.m */,
+				E8317D241E8A0C3100926BB3 /* CustomTableViewCell.h */,
+				E8317D251E8A0C3100926BB3 /* CustomTableViewCell.m */,
+				E8317D261E8A0C3100926BB3 /* CustomTableViewCell.xib */,
+				E8D5EAC41E8A1D240006BA7C /* GroupViewController.h */,
+				E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */,
+				E8D5EACF1E8A5F400006BA7C /* CustomCollectionViewCell.h */,
+				E8D5EAD01E8A5F400006BA7C /* CustomCollectionViewCell.m */,
+				E8D5EAD21E8A5FE80006BA7C /* CollectionViewController.h */,
+				E8D5EAD31E8A5FE80006BA7C /* CollectionViewController.m */,
+				E88AC1AF1E88CAEB00E450F6 /* AppDelegate.h */,
+				E88AC1B01E88CAEB00E450F6 /* AppDelegate.m */,
+				E88AC1B21E88CAEB00E450F6 /* ViewController.h */,
+				E88AC1B31E88CAEB00E450F6 /* ViewController.m */,
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
