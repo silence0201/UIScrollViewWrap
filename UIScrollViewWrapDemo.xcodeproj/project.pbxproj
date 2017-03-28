@@ -150,6 +150,7 @@
 		E88AC1C31E88CB6800E450F6 /* UIScrollViewWrap */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5EAC71E8A38AA0006BA7C /* UICollection */,
 				E88AC1C81E88CBDC00E450F6 /* UITableView */,
 				E88AC1C41E88CB7600E450F6 /* Common */,
 			);
@@ -175,6 +176,13 @@
 				E8317D141E8A047500926BB3 /* UITableViewWrap.h */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		E8D5EAC71E8A38AA0006BA7C /* UICollection */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UICollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
