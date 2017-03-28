@@ -25,6 +25,7 @@
 		E88AC1CE1E88ED2E00E450F6 /* UITableView+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1CD1E88ED2E00E450F6 /* UITableView+Model.m */; };
 		E8D5EAC61E8A1D240006BA7C /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */; };
 		E8D5EACA1E8A3EC80006BA7C /* UICollectionViewCell+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAC91E8A3EC80006BA7C /* UICollectionViewCell+Model.m */; };
+		E8D5EACD1E8A45240006BA7C /* UICollectionView+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EACC1E8A45240006BA7C /* UICollectionView+Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,9 @@
 		E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
 		E8D5EAC81E8A3EC80006BA7C /* UICollectionViewCell+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+Model.h"; sourceTree = "<group>"; };
 		E8D5EAC91E8A3EC80006BA7C /* UICollectionViewCell+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+Model.m"; sourceTree = "<group>"; };
+		E8D5EACB1E8A45240006BA7C /* UICollectionView+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+Model.h"; sourceTree = "<group>"; };
+		E8D5EACC1E8A45240006BA7C /* UICollectionView+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+Model.m"; sourceTree = "<group>"; };
+		E8D5EACE1E8A4E7C0006BA7C /* UICollectionWrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UICollectionWrap.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,9 @@
 			children = (
 				E8D5EAC81E8A3EC80006BA7C /* UICollectionViewCell+Model.h */,
 				E8D5EAC91E8A3EC80006BA7C /* UICollectionViewCell+Model.m */,
+				E8D5EACB1E8A45240006BA7C /* UICollectionView+Model.h */,
+				E8D5EACC1E8A45240006BA7C /* UICollectionView+Model.m */,
+				E8D5EACE1E8A4E7C0006BA7C /* UICollectionWrap.h */,
 			);
 			path = UICollection;
 			sourceTree = "<group>";
@@ -317,6 +324,7 @@
 				E8D5EACA1E8A3EC80006BA7C /* UICollectionViewCell+Model.m in Sources */,
 				E88AC1CB1E88D85000E450F6 /* UITableViewCell+Model.m in Sources */,
 				E88AC1B41E88CAEB00E450F6 /* ViewController.m in Sources */,
+				E8D5EACD1E8A45240006BA7C /* UICollectionView+Model.m in Sources */,
 				E8317D131E8A035E00926BB3 /* SystemStyleViewController.m in Sources */,
 				E88AC1C71E88CB8000E450F6 /* NSObject+SIQuickAssociated.m in Sources */,
 				E8317D171E8A077600926BB3 /* UIColor+Random.m in Sources */,

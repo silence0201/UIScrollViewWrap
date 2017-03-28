@@ -23,7 +23,7 @@ typedef void(^SelectBlock)(NSIndexPath *indexPath);
 /// 点击Cell回调Block
 @property(nonatomic,strong) SelectBlock selectedAction ;
 
-/// 计算Size信息,默认返回Zero,需要重写改方法
+/// 计算Size信息,默认返回(50,50),需要重写改方法
 - (CGSize)cellSizeInCollectionView:(UICollectionView *)collectionView withModel:(id)model ;
 
 #pragma mark >>>>>>>> 常用数据  <<<<<<<<<
