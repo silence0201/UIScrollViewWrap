@@ -24,6 +24,7 @@
 		E88AC1CB1E88D85000E450F6 /* UITableViewCell+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1CA1E88D85000E450F6 /* UITableViewCell+Model.m */; };
 		E88AC1CE1E88ED2E00E450F6 /* UITableView+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1CD1E88ED2E00E450F6 /* UITableView+Model.m */; };
 		E8D5EAC61E8A1D240006BA7C /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */; };
+		E8D5EACA1E8A3EC80006BA7C /* UICollectionViewCell+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D5EAC91E8A3EC80006BA7C /* UICollectionViewCell+Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,8 @@
 		E88AC1CD1E88ED2E00E450F6 /* UITableView+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Model.m"; sourceTree = "<group>"; };
 		E8D5EAC41E8A1D240006BA7C /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
 		E8D5EAC51E8A1D240006BA7C /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		E8D5EAC81E8A3EC80006BA7C /* UICollectionViewCell+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+Model.h"; sourceTree = "<group>"; };
+		E8D5EAC91E8A3EC80006BA7C /* UICollectionViewCell+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+Model.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 		E8D5EAC71E8A38AA0006BA7C /* UICollection */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5EAC81E8A3EC80006BA7C /* UICollectionViewCell+Model.h */,
+				E8D5EAC91E8A3EC80006BA7C /* UICollectionViewCell+Model.m */,
 			);
 			path = UICollection;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D5EAC61E8A1D240006BA7C /* GroupViewController.m in Sources */,
+				E8D5EACA1E8A3EC80006BA7C /* UICollectionViewCell+Model.m in Sources */,
 				E88AC1CB1E88D85000E450F6 /* UITableViewCell+Model.m in Sources */,
 				E88AC1B41E88CAEB00E450F6 /* ViewController.m in Sources */,
 				E8317D131E8A035E00926BB3 /* SystemStyleViewController.m in Sources */,
