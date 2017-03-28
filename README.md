@@ -12,6 +12,10 @@
 如果需要`UITableView`的封装,只需导入`Common`和`UITableView`文件夹到项目中  
 如果需要`UICollection `的封装,只需导入`Common`和`UICollection `文件夹到项目中
 
+### 2. Pod安装
+
+	pod 'SIScrollViewWrap','~>1.0'
+
 ## 用法
 
 1. 导入头文件
