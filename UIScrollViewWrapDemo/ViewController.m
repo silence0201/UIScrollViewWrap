@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UITableView+Model.h"
+#import "UITableViewWrap.h"
 
 @interface ViewController ()
 
@@ -32,6 +32,5 @@
     [self.view addSubview:self.tableView] ;
     
 }
-
 
 @end
