@@ -29,6 +29,14 @@
                                     <segue destination="vtM-41-we2" kind="show" id="yHm-iu-q0j"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OI-5M-cDD">
+                                <rect key="frame" x="65" y="349" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="使用Cell数组"/>
+                                <connections>
+                                    <segue destination="OOM-fp-9gw" kind="show" id="b4A-NN-0Dz"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7Z-hg-Efa">
                                 <rect key="frame" x="78" y="195" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,6 +53,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79" y="114"/>
+        </scene>
+        <!--Cell数组-->
+        <scene sceneID="ty1-xW-rbr">
+            <objects>
+                <viewController id="OOM-fp-9gw" customClass="CellClassViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6uB-gP-EjH"/>
+                        <viewControllerLayoutGuide type="bottom" id="shi-c9-dxy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5KJ-bD-qSd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cell数组" id="F01-cT-gcp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QA5-6q-Qnw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="809"/>
         </scene>
         <!--简单使用-->
         <scene sceneID="MWj-Cu-iff">

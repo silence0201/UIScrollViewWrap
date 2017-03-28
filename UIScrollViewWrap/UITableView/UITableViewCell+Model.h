@@ -49,7 +49,7 @@ FOUNDATION_EXTERN NSString *const kCellSelected;
 @property(nonatomic,strong) SelectedBlock selectedAction ;
 
 /// 计算行高,默认为44.重写该方法实现自定义行高
-+ (CGFloat)cellHeightInTableView:(UITableView *)tableView withModel:(id)model ;
+- (CGFloat)cellHeightInTableView:(UITableView *)tableView withModel:(id)model ;
 
 #pragma mark --- 常用数据
 /// IndexPath信息

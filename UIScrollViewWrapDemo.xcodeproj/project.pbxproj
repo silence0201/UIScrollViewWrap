@@ -11,6 +11,9 @@
 		E8317D131E8A035E00926BB3 /* SystemStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8317D121E8A035E00926BB3 /* SystemStyleViewController.m */; };
 		E8317D171E8A077600926BB3 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E8317D161E8A077600926BB3 /* UIColor+Random.m */; };
 		E8317D201E8A0A0F00926BB3 /* UIImage+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = E8317D1F1E8A0A0F00926BB3 /* UIImage+Effect.m */; };
+		E8317D231E8A0B0E00926BB3 /* CellClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8317D221E8A0B0E00926BB3 /* CellClassViewController.m */; };
+		E8317D271E8A0C3100926BB3 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8317D251E8A0C3100926BB3 /* CustomTableViewCell.m */; };
+		E8317D281E8A0C3100926BB3 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8317D261E8A0C3100926BB3 /* CustomTableViewCell.xib */; };
 		E88AC1AE1E88CAEB00E450F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1AD1E88CAEB00E450F6 /* main.m */; };
 		E88AC1B11E88CAEB00E450F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1B01E88CAEB00E450F6 /* AppDelegate.m */; };
 		E88AC1B41E88CAEB00E450F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1B31E88CAEB00E450F6 /* ViewController.m */; };
@@ -33,6 +36,11 @@
 		E8317D161E8A077600926BB3 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 		E8317D1E1E8A0A0F00926BB3 /* UIImage+Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Effect.h"; sourceTree = "<group>"; };
 		E8317D1F1E8A0A0F00926BB3 /* UIImage+Effect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Effect.m"; sourceTree = "<group>"; };
+		E8317D211E8A0B0E00926BB3 /* CellClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellClassViewController.h; sourceTree = "<group>"; };
+		E8317D221E8A0B0E00926BB3 /* CellClassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellClassViewController.m; sourceTree = "<group>"; };
+		E8317D241E8A0C3100926BB3 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		E8317D251E8A0C3100926BB3 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		E8317D261E8A0C3100926BB3 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		E88AC1A91E88CAEB00E450F6 /* UIScrollViewWrapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIScrollViewWrapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88AC1AD1E88CAEB00E450F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88AC1AF1E88CAEB00E450F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +121,11 @@
 				E88AC1AC1E88CAEB00E450F6 /* Supporting Files */,
 				E8317D111E8A035E00926BB3 /* SystemStyleViewController.h */,
 				E8317D121E8A035E00926BB3 /* SystemStyleViewController.m */,
+				E8317D211E8A0B0E00926BB3 /* CellClassViewController.h */,
+				E8317D221E8A0B0E00926BB3 /* CellClassViewController.m */,
+				E8317D241E8A0C3100926BB3 /* CustomTableViewCell.h */,
+				E8317D251E8A0C3100926BB3 /* CustomTableViewCell.m */,
+				E8317D261E8A0C3100926BB3 /* CustomTableViewCell.xib */,
 			);
 			path = UIScrollViewWrapDemo;
 			sourceTree = "<group>";
@@ -222,6 +235,7 @@
 			files = (
 				E88AC1BC1E88CAEB00E450F6 /* LaunchScreen.storyboard in Resources */,
 				E88AC1B91E88CAEB00E450F6 /* Assets.xcassets in Resources */,
+				E8317D281E8A0C3100926BB3 /* CustomTableViewCell.xib in Resources */,
 				E88AC1B71E88CAEB00E450F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,8 +300,10 @@
 				E8317D131E8A035E00926BB3 /* SystemStyleViewController.m in Sources */,
 				E88AC1C71E88CB8000E450F6 /* NSObject+SIQuickAssociated.m in Sources */,
 				E8317D171E8A077600926BB3 /* UIColor+Random.m in Sources */,
+				E8317D271E8A0C3100926BB3 /* CustomTableViewCell.m in Sources */,
 				E8317D201E8A0A0F00926BB3 /* UIImage+Effect.m in Sources */,
 				E88AC1CE1E88ED2E00E450F6 /* UITableView+Model.m in Sources */,
+				E8317D231E8A0B0E00926BB3 /* CellClassViewController.m in Sources */,
 				E88AC1B11E88CAEB00E450F6 /* AppDelegate.m in Sources */,
 				E88AC1AE1E88CAEB00E450F6 /* main.m in Sources */,
 			);

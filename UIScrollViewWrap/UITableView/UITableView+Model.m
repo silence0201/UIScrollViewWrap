@@ -139,7 +139,7 @@ static NSString *const cellIdentifier = @"CellID" ;
         NSString *cellId = [cellIdentifier stringByAppendingFormat:@"_%ld",i] ;
         id cell = tableViewCells[i] ;
         if ([cell isKindOfClass:[UINib class]]) {
-            [self registerClass:cell forCellReuseIdentifier:cellId] ;
+            [self registerNib:cell forCellReuseIdentifier:cellId] ;
         }else{
             [self registerClass:cell forCellReuseIdentifier:cellId] ;
         }
@@ -374,8 +374,13 @@ static NSString *const cellIdentifier = @"CellID" ;
         }] ;
     }
     
-    // 计算交给Cell处理,默认返回44.0f
-    return [UITableViewCell cellHeightInTableView:tableView withModel:model] ;
+    // 计算交给Cell处理
+    CGFloat height = 44.0f ; // 默认返回44
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId] ;
+    if (cell) {
+        height = [cell cellHeightInTableView:tableView withModel:model] ;
+    }
+    return height ;
 }
 
 // 头的高度
