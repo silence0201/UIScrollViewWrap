@@ -63,7 +63,7 @@
 	@property (nonatomic,weak) id<SITableViewDelegate> sDelegate ;
 	@property (nonatomic,weak) id<SITableViewDataSource> sDataSource ;
 	```
-5. 自定集成了`UITableView+FDTemplateLayoutCell`实现了自动计算高度,只需要设置下面进行开启
+5. 自定集成了[`UITableView+FDTemplateLayoutCell`](https://github.com/forkingdog/UITableView-FDTemplateLayoutCell)实现了自动计算高度,只需要设置下面进行开启
 
 	```objective-c
 	/// 是否支持Cell自动计算高度,默认不支持
