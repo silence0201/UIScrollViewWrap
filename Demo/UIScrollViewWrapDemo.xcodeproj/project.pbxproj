@@ -19,6 +19,10 @@
 		E83465751E8A809600F1F757 /* UICollectionViewCell+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E834656B1E8A809600F1F757 /* UICollectionViewCell+Model.m */; };
 		E83465761E8A809600F1F757 /* UITableView+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E834656F1E8A809600F1F757 /* UITableView+Model.m */; };
 		E83465771E8A809600F1F757 /* UITableViewCell+Model.m in Sources */ = {isa = PBXBuildFile; fileRef = E83465711E8A809600F1F757 /* UITableViewCell+Model.m */; };
+		E83465801E8A883100F1F757 /* UITableView+FDIndexPathHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E83465791E8A883100F1F757 /* UITableView+FDIndexPathHeightCache.m */; };
+		E83465811E8A883100F1F757 /* UITableView+FDKeyedHeightCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E834657B1E8A883100F1F757 /* UITableView+FDKeyedHeightCache.m */; };
+		E83465821E8A883100F1F757 /* UITableView+FDTemplateLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E834657D1E8A883100F1F757 /* UITableView+FDTemplateLayoutCell.m */; };
+		E83465831E8A883100F1F757 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = E834657F1E8A883100F1F757 /* UITableView+FDTemplateLayoutCellDebug.m */; };
 		E88AC1AE1E88CAEB00E450F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1AD1E88CAEB00E450F6 /* main.m */; };
 		E88AC1B11E88CAEB00E450F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1B01E88CAEB00E450F6 /* AppDelegate.m */; };
 		E88AC1B41E88CAEB00E450F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88AC1B31E88CAEB00E450F6 /* ViewController.m */; };
@@ -57,6 +61,14 @@
 		E83465701E8A809600F1F757 /* UITableViewCell+Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Model.h"; sourceTree = "<group>"; };
 		E83465711E8A809600F1F757 /* UITableViewCell+Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Model.m"; sourceTree = "<group>"; };
 		E83465721E8A809600F1F757 /* UITableViewWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableViewWrap.h; sourceTree = "<group>"; };
+		E83465781E8A883100F1F757 /* UITableView+FDIndexPathHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDIndexPathHeightCache.h"; sourceTree = "<group>"; };
+		E83465791E8A883100F1F757 /* UITableView+FDIndexPathHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDIndexPathHeightCache.m"; sourceTree = "<group>"; };
+		E834657A1E8A883100F1F757 /* UITableView+FDKeyedHeightCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDKeyedHeightCache.h"; sourceTree = "<group>"; };
+		E834657B1E8A883100F1F757 /* UITableView+FDKeyedHeightCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDKeyedHeightCache.m"; sourceTree = "<group>"; };
+		E834657C1E8A883100F1F757 /* UITableView+FDTemplateLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCell.h"; sourceTree = "<group>"; };
+		E834657D1E8A883100F1F757 /* UITableView+FDTemplateLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCell.m"; sourceTree = "<group>"; };
+		E834657E1E8A883100F1F757 /* UITableView+FDTemplateLayoutCellDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+FDTemplateLayoutCellDebug.h"; sourceTree = "<group>"; };
+		E834657F1E8A883100F1F757 /* UITableView+FDTemplateLayoutCellDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+FDTemplateLayoutCellDebug.m"; sourceTree = "<group>"; };
 		E88AC1A91E88CAEB00E450F6 /* UIScrollViewWrapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIScrollViewWrapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88AC1AD1E88CAEB00E450F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E88AC1AF1E88CAEB00E450F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,6 +130,14 @@
 		E83465641E8A809600F1F757 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E83465781E8A883100F1F757 /* UITableView+FDIndexPathHeightCache.h */,
+				E83465791E8A883100F1F757 /* UITableView+FDIndexPathHeightCache.m */,
+				E834657A1E8A883100F1F757 /* UITableView+FDKeyedHeightCache.h */,
+				E834657B1E8A883100F1F757 /* UITableView+FDKeyedHeightCache.m */,
+				E834657C1E8A883100F1F757 /* UITableView+FDTemplateLayoutCell.h */,
+				E834657D1E8A883100F1F757 /* UITableView+FDTemplateLayoutCell.m */,
+				E834657E1E8A883100F1F757 /* UITableView+FDTemplateLayoutCellDebug.h */,
+				E834657F1E8A883100F1F757 /* UITableView+FDTemplateLayoutCellDebug.m */,
 				E83465651E8A809600F1F757 /* NSObject+SIQuickAssociated.h */,
 				E83465661E8A809600F1F757 /* NSObject+SIQuickAssociated.m */,
 			);
@@ -339,12 +359,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83465821E8A883100F1F757 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				E8D5EAD41E8A5FE80006BA7C /* CollectionViewController.m in Sources */,
 				E8D5EAC61E8A1D240006BA7C /* GroupViewController.m in Sources */,
 				E88AC1B41E88CAEB00E450F6 /* ViewController.m in Sources */,
 				E8317D131E8A035E00926BB3 /* SystemStyleViewController.m in Sources */,
 				E83465751E8A809600F1F757 /* UICollectionViewCell+Model.m in Sources */,
 				E8317D171E8A077600926BB3 /* UIColor+Random.m in Sources */,
+				E83465811E8A883100F1F757 /* UITableView+FDKeyedHeightCache.m in Sources */,
+				E83465801E8A883100F1F757 /* UITableView+FDIndexPathHeightCache.m in Sources */,
 				E83465761E8A809600F1F757 /* UITableView+Model.m in Sources */,
 				E8317D271E8A0C3100926BB3 /* CustomTableViewCell.m in Sources */,
 				E83465741E8A809600F1F757 /* UICollectionView+Model.m in Sources */,
@@ -353,6 +376,7 @@
 				E8317D201E8A0A0F00926BB3 /* UIImage+Effect.m in Sources */,
 				E8317D231E8A0B0E00926BB3 /* CellClassViewController.m in Sources */,
 				E88AC1B11E88CAEB00E450F6 /* AppDelegate.m in Sources */,
+				E83465831E8A883100F1F757 /* UITableView+FDTemplateLayoutCellDebug.m in Sources */,
 				E88AC1AE1E88CAEB00E450F6 /* main.m in Sources */,
 				E83465771E8A809600F1F757 /* UITableViewCell+Model.m in Sources */,
 			);

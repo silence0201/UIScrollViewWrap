@@ -9,7 +9,7 @@
 #import "UITableView+Model.h"
 #import "NSObject+SIQuickAssociated.h"
 #import "UITableViewCell+Model.h"
-#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import "UITableView+FDTemplateLayoutCell.h"
 
 
 /// Cell在TableViewCells中的索引
