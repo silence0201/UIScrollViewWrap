@@ -328,20 +328,6 @@ static NSString *const cellIdentifier = @"CellID" ;
 
 
 #pragma mark >>>>>>>>> UITableView Delegate  <<<<<<<<<<
-// 点击事件
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.sDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
-        return [self.sDelegate tableView:self didSelectRowAtIndexPath:indexPath] ;
-    }
-    if (self.clearSelected) {
-        [self deselectRowAtIndexPath:indexPath animated:YES] ;
-    }
-    UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath] ;
-    if (cell.selectedAction) {
-        cell.selectedAction(indexPath) ;
-    }
-}
-
 // cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.sDelegate respondsToSelector:@selector(tableView:heightForRowAtIndexPath:)]){
@@ -418,34 +404,108 @@ static NSString *const cellIdentifier = @"CellID" ;
     return nil ;
 }
 
+#pragma mark <<<<<<<<<<< Selected Delegate
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if([self.sDelegate respondsToSelector:@selector(tableView:willSelectRowAtIndexPath:)]){
+        return [self.sDelegate tableView:tableView willSelectRowAtIndexPath:indexPath] ;
+    }
+    return indexPath ;
+}
 
-#pragma mark >>>>>>>>>> Display
+// 点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+        return [self.sDelegate tableView:self didSelectRowAtIndexPath:indexPath] ;
+    }
+    if (self.clearSelected) {
+        [self deselectRowAtIndexPath:indexPath animated:YES] ;
+    }
+    UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath] ;
+    if (cell.selectedAction) {
+        cell.selectedAction(indexPath) ;
+    }
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDelegate respondsToSelector:@selector(tableView:willDeselectRowAtIndexPath:)]) {
+        return [self.sDelegate tableView:tableView willDeselectRowAtIndexPath:indexPath] ;
+    }
+    return indexPath ;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDelegate respondsToSelector:@selector(tableView:didDeselectRowAtIndexPath:)]) {
+        return [self.sDelegate tableView:tableView didDeselectRowAtIndexPath:indexPath] ;
+    }
+}
+
+#pragma mark <<<<<<<<<<< Edit Delegate
+- (void)tableView:(UITableView *)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath{
+    if([self.sDelegate respondsToSelector:@selector(tableView:willBeginEditingRowAtIndexPath:)]){
+        return [self.sDelegate tableView:tableView willBeginEditingRowAtIndexPath:indexPath] ;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDelegate respondsToSelector:@selector(tableView:didEndEditingRowAtIndexPath:)]) {
+        return [self.sDelegate tableView:tableView didEndEditingRowAtIndexPath:indexPath] ;
+    }
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDelegate respondsToSelector:@selector(tableView:editingStyleForRowAtIndexPath:)]) {
+        return [self.sDelegate tableView:tableView editingStyleForRowAtIndexPath:indexPath] ;
+    }
+    return UITableViewCellEditingStyleNone ;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([self.sDelegate respondsToSelector:@selector(tableView:titleForDeleteConfirmationButtonForRowAtIndexPath:)]) {
+        return [self.sDelegate tableView:tableView titleForDeleteConfirmationButtonForRowAtIndexPath:indexPath] ;
+    }
+    return nil ;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([self.sDelegate respondsToSelector:@selector(tableView:shouldIndentWhileEditingRowAtIndexPath:)]) {
+        return [self.sDelegate tableView:tableView shouldIndentWhileEditingRowAtIndexPath:indexPath] ;
+    }
+    return NO ;
+}
+
+#pragma mark <<<<<<<<<<< Display Delegate
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if([self.sDelegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]){
         return [self.sDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
     }
 }
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0) {
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
     if([self.sDelegate respondsToSelector:@selector(tableView:willDisplayHeaderView:forSection:)]){
         return [self.sDelegate tableView:tableView willDisplayHeaderView:view forSection:section];
     }
 }
-- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0) {
+
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
     if([self.sDelegate respondsToSelector:@selector(tableView:willDisplayFooterView:forSection:)]){
         return [self.sDelegate tableView:tableView willDisplayFooterView:view forSection:section];
     }
 }
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath NS_AVAILABLE_IOS(6_0) {
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath*)indexPath  {
     if([self.sDelegate respondsToSelector:@selector(tableView:didEndDisplayingCell:forRowAtIndexPath:)]){
         return [self.sDelegate tableView:tableView didEndDisplayingCell:cell forRowAtIndexPath:indexPath];
     }
 }
-- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0) {
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingHeaderView:(UIView *)view forSection:(NSInteger)section  {
     if([self.sDelegate respondsToSelector:@selector(tableView:didEndDisplayingHeaderView:forSection:)]){
         return [self.sDelegate tableView:tableView didEndDisplayingHeaderView:view forSection:section];
     }
 }
-- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section NS_AVAILABLE_IOS(6_0) {
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingFooterView:(UIView *)view forSection:(NSInteger)section  {
     if([self.sDelegate respondsToSelector:@selector(tableView:didEndDisplayingFooterView:forSection:)]){
         return [self.sDelegate tableView:tableView didEndDisplayingFooterView:view forSection:section];
     }

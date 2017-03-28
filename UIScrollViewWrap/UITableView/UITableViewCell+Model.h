@@ -11,7 +11,7 @@
 typedef void(^SelectedBlock)(NSIndexPath *indexPath);
 
 
-#pragma mark --- 模型Key
+#pragma mark >>>>>>>>> 模型Key  <<<<<<<<<<
 
 /// TitleView的内容
 FOUNDATION_EXTERN NSString *const kCellTitle;
@@ -40,7 +40,7 @@ FOUNDATION_EXTERN NSString *const kCellSelected;
 
 @interface UITableViewCell (Model)
 
-#pragma mark --- 模型信息
+#pragma mark >>>>>>>> 模型信息  <<<<<<<<
 
 /// 模型数据,可自定义,如果使用系统可根据模型Key构建字典对象或者直接传入字符串,自定义模型只需要重写setModel方法
 @property(nonatomic,strong) id model;
@@ -51,7 +51,7 @@ FOUNDATION_EXTERN NSString *const kCellSelected;
 /// 计算行高,默认为44.重写该方法实现自定义行高
 - (CGFloat)cellHeightInTableView:(UITableView *)tableView withModel:(id)model ;
 
-#pragma mark --- 常用数据
+#pragma mark >>>>>>>> 常用数据  <<<<<<<<<
 /// IndexPath信息
 @property (nonatomic,strong) NSIndexPath *indexPath;
 
