@@ -175,7 +175,6 @@ static NSString *const cellIdentifier = @"CellID" ;
 @end
 
 
-
 @implementation UITableView (Delegate)
 
 #pragma mark --- UITableView DataSource
@@ -299,45 +298,34 @@ static NSString *const cellIdentifier = @"CellID" ;
     return index ;
 }
 
-
-
-#pragma mark ---
-- (id)modelForIndexPath:(NSIndexPath *)indexPath {
-    if (self.models.count == 0)  return nil ;
-    id model = nil ;
-    if (self.sectionEnable) {
-        id groupModel = self.models[indexPath.section] ;
-        if([groupModel isKindOfClass:[NSArray class]]){ // 不带标题
-            model = groupModel[indexPath.row] ;
-        }else if([groupModel isKindOfClass:[NSDictionary class]]){ // 带标题的字典
-            NSArray *array = [groupModel objectForKey:kGroupModels] ;
-            if ([array isKindOfClass:[NSArray class]]) {
-                model = array[indexPath.row] ;
-            }
-        }
-    }else{
-        model = self.models[indexPath.row] ;
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDataSource respondsToSelector:@selector(tableView:commitEditingStyle:forRowAtIndexPath:)]){
+        return [self.sDataSource tableView:tableView commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
     }
-    return model ;
 }
 
-- (NSInteger)cellIndexForIndexPath:(NSIndexPath *)indexPath {
-    if (self.tableViewCells) {
-        if([self.sDataSource respondsToSelector:@selector(tableView:cellArrayIndexForIndexPath:)]){
-            return [self.sDataSource tableView:self cellArrayIndexForIndexPath:indexPath] ;
-        }else {
-            id model = [self modelForIndexPath:indexPath] ;
-            if ([model isKindOfClass:[NSDictionary class]]) {
-                NSInteger index = [[model objectForKey:kCellArrayIndex] integerValue] ;
-                if (index >= self.tableViewCells.count) {
-                    index = 0 ;
-                }
-                return index ;
-            }
-        }
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDataSource respondsToSelector:@selector(tableView:canEditRowAtIndexPath:)]){
+        return [self.sDataSource tableView:tableView canEditRowAtIndexPath:indexPath] ;
     }
-    return 0 ;
+    return NO;
 }
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDataSource respondsToSelector:@selector(tableView:canMoveRowAtIndexPath:)]){
+        return [self.sDataSource tableView:tableView canMoveRowAtIndexPath:indexPath] ;
+    }
+    return NO;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    if ([self.sDataSource respondsToSelector:@selector(tableView:moveRowAtIndexPath:toIndexPath:)]){
+        return [self.sDataSource tableView:tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath] ;
+    }
+}
+
+
+
 
 #pragma mark --- Delegate
 // 点击事件
@@ -416,6 +404,21 @@ static NSString *const cellIdentifier = @"CellID" ;
     return nil ;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDelegate respondsToSelector:@selector(tableView:estimatedHeightForRowAtIndexPath:)]){
+        return [self.sDelegate tableView:tableView estimatedHeightForRowAtIndexPath:indexPath] ;
+    }
+    return 0.0f ;
+}
+
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.sDelegate respondsToSelector:@selector(tableView:editActionsForRowAtIndexPath:)]){
+        return [self.sDelegate tableView:tableView editActionsForRowAtIndexPath:indexPath] ;
+    }
+    return nil ;
+}
+
+
 #pragma mark --- Display
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if([self.sDelegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]){
@@ -448,7 +451,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     }
 }
 
-#pragma mark  scrollview delegate
+#pragma mark  --- Scrollview Delegate
 
 - (void)scrollViewDidScroll:(UITableView *)tableView{
     if([self.sDelegate respondsToSelector:@selector(scrollViewDidScroll:)]){
@@ -479,5 +482,43 @@ static NSString *const cellIdentifier = @"CellID" ;
     if([self.sDelegate respondsToSelector:@selector(scrollViewDidEndDecelerating:)]){
         [self.sDelegate scrollViewDidEndDecelerating:tableView];
     }
+}
+
+#pragma mark --- Private
+- (id)modelForIndexPath:(NSIndexPath *)indexPath {
+    if (self.models.count == 0)  return nil ;
+    id model = nil ;
+    if (self.sectionEnable) {
+        id groupModel = self.models[indexPath.section] ;
+        if([groupModel isKindOfClass:[NSArray class]]){ // 不带标题
+            model = groupModel[indexPath.row] ;
+        }else if([groupModel isKindOfClass:[NSDictionary class]]){ // 带标题的字典
+            NSArray *array = [groupModel objectForKey:kGroupModels] ;
+            if ([array isKindOfClass:[NSArray class]]) {
+                model = array[indexPath.row] ;
+            }
+        }
+    }else{
+        model = self.models[indexPath.row] ;
+    }
+    return model ;
+}
+
+- (NSInteger)cellIndexForIndexPath:(NSIndexPath *)indexPath {
+    if (self.tableViewCells) {
+        if([self.sDataSource respondsToSelector:@selector(tableView:cellArrayIndexForIndexPath:)]){
+            return [self.sDataSource tableView:self cellArrayIndexForIndexPath:indexPath] ;
+        }else {
+            id model = [self modelForIndexPath:indexPath] ;
+            if ([model isKindOfClass:[NSDictionary class]]) {
+                NSInteger index = [[model objectForKey:kCellArrayIndex] integerValue] ;
+                if (index >= self.tableViewCells.count) {
+                    index = 0 ;
+                }
+                return index ;
+            }
+        }
+    }
+    return 0 ;
 }
 @end

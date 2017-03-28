@@ -33,6 +33,7 @@ FOUNDATION_EXTERN NSString *const kGroupHeaderTitle;
 /// 分组的footer信息key
 FOUNDATION_EXTERN NSString *const kGroupFooderTitle;
 
+#pragma mark --- Model
 @interface UITableView (Model)
 
 /// 代理系统代理
@@ -63,3 +64,5 @@ FOUNDATION_EXTERN NSString *const kGroupFooderTitle;
 @property (nonatomic,weak) UIViewController *containVc ;
 
 @end
+
+

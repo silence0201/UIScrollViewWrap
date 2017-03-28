@@ -24,6 +24,10 @@
     objc_setAssociatedObject(self,key,value,OBJC_ASSOCIATION_ASSIGN) ;
 }
 
+- (void)si_quickCopyAssociateValue:(id)value withKey:(void *)key {
+    objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_COPY) ;
+}
+
 - (id)si_quickGetAssociatedValueForKey:(void *)key{
     return objc_getAssociatedObject(self, key) ;
 }

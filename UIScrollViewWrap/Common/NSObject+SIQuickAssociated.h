@@ -25,6 +25,9 @@ typedef OBJC_ENUM(unsigned long, SIAssociationPolicy) {
 /** 快速附加一个weak对象 */
 - (void)si_quickWeaklyAssociateValue:(id)value withKey:(void *)key ;
 
+/** 快速附加一个copy对象 */
+- (void)si_quickCopyAssociateValue:(id)value withKey:(void *)key ;
+
 /** 快速附加一个指定管理类型的对象 */
 - (void)si_quickAssociateValue:(id)value withKey:(void *)key withType:(SIAssociationPolicy)type ;
 
