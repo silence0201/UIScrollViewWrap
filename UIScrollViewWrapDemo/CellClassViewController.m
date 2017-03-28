@@ -38,7 +38,6 @@
         }else{
             [dic setObject:@(1) forKey:kCellArrayIndex] ;
         }
-        
         [array addObject:dic] ;
     }
     

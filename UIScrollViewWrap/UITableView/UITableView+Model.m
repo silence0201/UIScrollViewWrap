@@ -296,7 +296,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     if ([self.sDataSource respondsToSelector:@selector(tableView:sectionForSectionIndexTitle:atIndex:)]){
         return [self.sDataSource tableView:tableView sectionForSectionIndexTitle:title atIndex:index] ;
     }
-    return -1 ;
+    return index ;
 }
 
 
@@ -310,7 +310,7 @@ static NSString *const cellIdentifier = @"CellID" ;
         if([groupModel isKindOfClass:[NSArray class]]){ // 不带标题
             model = groupModel[indexPath.row] ;
         }else if([groupModel isKindOfClass:[NSDictionary class]]){ // 带标题的字典
-            NSArray *array = [groupModel objectForKey:groupModel] ;
+            NSArray *array = [groupModel objectForKey:kGroupModels] ;
             if ([array isKindOfClass:[NSArray class]]) {
                 model = array[indexPath.row] ;
             }
