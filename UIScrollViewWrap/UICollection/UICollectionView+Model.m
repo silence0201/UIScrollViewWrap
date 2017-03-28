@@ -20,7 +20,6 @@ static char sDelegateKey ;
 static char sDataSourceKey ;
 static char modelskey ;
 static char sectionEnableKey ;
-static char sectionIndexTitlesKey ;
 static char collectionCellKey ;
 static char clearSelectedKey ;
 static char containVcKey ;
@@ -56,15 +55,6 @@ static char containVcKey ;
 
 - (BOOL)sectionEnable {
     return [[self si_quickGetAssociatedValueForKey:&sectionEnableKey] boolValue] ;
-}
-
-// IndexTitle
-- (void)setSectionIndexTitles:(NSArray<NSString *> *)sectionIndexTitles {
-    [self si_quickAssociateValue:sectionIndexTitles withKey:&sectionIndexTitlesKey] ;
-}
-
-- (NSArray<NSString *> *)sectionIndexTitles {
-    return [self si_quickGetAssociatedValueForKey:&sectionIndexTitlesKey] ;
 }
 
 // 是否开启ClearSelected样式
@@ -200,10 +190,6 @@ static char containVcKey ;
 - (NSArray<NSString *> *)indexTitlesForCollectionView:(UICollectionView *)collectionView{
     if([self.sDataSource respondsToSelector:@selector(indexTitlesForCollectionView:)]){
         return [self.sDataSource indexTitlesForCollectionView:collectionView] ;
-    }
-    
-    if (self.sectionIndexTitles) {
-        return self.sectionIndexTitles ;
     }
     return nil ;
 }

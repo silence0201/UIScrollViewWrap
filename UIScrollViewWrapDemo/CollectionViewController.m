@@ -38,7 +38,6 @@
     }
     
     self.collectionView.models = array ;
-    self.collectionView.sectionIndexTitles = indexTuitle ;
     
     [self.view addSubview:self.collectionView] ;
 }

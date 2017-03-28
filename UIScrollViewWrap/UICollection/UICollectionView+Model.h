@@ -27,8 +27,6 @@ FOUNDATION_EXTERN NSString *const kCollectionGroupModels;
 @property (nonatomic,strong) NSMutableArray *models ;
 /// 是否开启分组
 @property (nonatomic,assign) BOOL sectionEnable ;
-/// 开启分组后,右侧IndexTitle信息
-@property (nonatomic,strong) NSArray<NSString *> *sectionIndexTitles ;
 
 /// 注册单个Cell,支持Class和Nib
 @property (nonatomic,strong) id collectionCell ;
