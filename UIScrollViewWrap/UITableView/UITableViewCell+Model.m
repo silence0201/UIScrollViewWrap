@@ -33,7 +33,7 @@ NSString *const kCellDetailFont = @"detailFont" ;
 /// 点击事件
 NSString *const kCellSelected = @"selected" ;
 
-#pragma mark --- 关联对象Key
+#pragma mark >>>>> 关联对象Key  <<<<<
 static char modelKey ;
 static char selectedActionKey ;
 static char indexPathKey ;
@@ -42,7 +42,7 @@ static char superTableViewKey ;
 
 @implementation UITableViewCell (Model)
 
-#pragma mark --- 关联对象
+#pragma mark >>>>>>> 关联对象  <<<<<<<
 - (void)setSelectedAction:(SelectedBlock)selectedAction {
     [self si_quickAssociateValue:selectedAction withKey:&selectedActionKey] ;
 }
@@ -76,7 +76,7 @@ static char superTableViewKey ;
     return [self si_quickGetAssociatedValueForKey:&superTableViewKey] ;
 }
 
-#pragma mark --- 模型操作
+#pragma mark >>>>>>>>> 模型操作  <<<<<<<<
 // 默认模型格式化方法
 - (void)setModel:(id)model {
     [self si_quickAssociateValue:model withKey:&modelKey] ;

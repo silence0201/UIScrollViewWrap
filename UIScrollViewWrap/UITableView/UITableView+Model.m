@@ -23,7 +23,7 @@ NSString *const kGroupHeaderTitle = @"groupHeaderTitle" ;
 /// 分组的fooder信息
 NSString *const kGroupFooderTitle = @"groupFooderTitle" ;
 
-#pragma mark --- 关联对象Key
+#pragma mark >>>>>>>>> 关联对象Key  <<<<<<<<<
 static char sDelegateKey ;
 static char sDataSourceKey ;
 static char modelskey ;
@@ -43,7 +43,7 @@ static NSString *const cellIdentifier = @"CellID" ;
 
 @implementation UITableView (Model)
 
-#pragma mark --- 关联对象
+#pragma mark >>>>>>>>>> 关联对象  <<<<<<<<<<<<<
 // 设置代理
 - (void)setSDelegate:(id<SITableViewDelegate>)sDelegate {
     [self si_quickWeaklyAssociateValue:sDelegate withKey:&sDelegateKey] ;
@@ -114,7 +114,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     return [self si_quickGetAssociatedValueForKey:&sectionIndexTitlesKey] ;
 }
 
-#pragma mark --- 注册CellIdentifier
+#pragma mark >>>>>>> 注册CellIdentifier <<<<<<<
 // 设置单个Cell信息
 - (void)setTableViewCell:(id)tableViewCell {
     [self si_quickAssociateValue:tableViewCell withKey:&tableViewCellKey] ;
@@ -151,7 +151,7 @@ static NSString *const cellIdentifier = @"CellID" ;
 }
 
 
-#pragma mark --- 设置数据源
+#pragma mark >>>>>>>> 设置数据源 <<<<<<<<
 // 设置数据源
 - (void)setModels:(NSMutableArray *)models {
     NSMutableArray *array = models ;
@@ -177,7 +177,7 @@ static NSString *const cellIdentifier = @"CellID" ;
 
 @implementation UITableView (Delegate)
 
-#pragma mark --- UITableView DataSource
+#pragma mark >>>>>>> UITableView DataSource  <<<<<<<<<<
 // 分组数量
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if([self.sDataSource respondsToSelector:@selector(numberOfSectionsInTableView:)]){
@@ -327,7 +327,7 @@ static NSString *const cellIdentifier = @"CellID" ;
 
 
 
-#pragma mark --- Delegate
+#pragma mark >>>>>>>>> UITableView Delegate  <<<<<<<<<<
 // 点击事件
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.sDelegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
@@ -419,7 +419,7 @@ static NSString *const cellIdentifier = @"CellID" ;
 }
 
 
-#pragma mark --- Display
+#pragma mark >>>>>>>>>> Display
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if([self.sDelegate respondsToSelector:@selector(tableView:willDisplayCell:forRowAtIndexPath:)]){
         return [self.sDelegate tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
@@ -451,7 +451,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     }
 }
 
-#pragma mark  --- Scrollview Delegate
+#pragma mark >>>>>>>> Scrollview Delegate  <<<<<<<<
 
 - (void)scrollViewDidScroll:(UITableView *)tableView{
     if([self.sDelegate respondsToSelector:@selector(scrollViewDidScroll:)]){
@@ -484,7 +484,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     }
 }
 
-#pragma mark --- Private
+#pragma mark >>>>>>>>>>>>> Private
 - (id)modelForIndexPath:(NSIndexPath *)indexPath {
     if (self.models.count == 0)  return nil ;
     id model = nil ;
