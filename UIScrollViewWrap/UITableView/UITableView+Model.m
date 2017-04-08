@@ -195,6 +195,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     if([self.sDataSource respondsToSelector:@selector(tableView:numberOfRowsInSection:)]) {
         return [self.sDataSource tableView:tableView numberOfRowsInSection:section] ;
     }
+    if(tableView.models.count == 0) return 0 ;
     if(tableView.sectionEnable){
         id models = tableView.models[section] ;
         // 如果二维模型是个数组
@@ -253,6 +254,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     if([self.sDataSource respondsToSelector:@selector(tableView:titleForHeaderInSection:)]){
         return [self.sDataSource tableView:tableView titleForHeaderInSection:section] ;
     }
+    if(self.models.count == 0) return nil ;
     id model = self.models[section];
     if([model isKindOfClass:[NSDictionary class]]){
         id title = [model objectForKey:kGroupHeaderTitle] ;
@@ -270,6 +272,7 @@ static NSString *const cellIdentifier = @"CellID" ;
     if([self.sDataSource respondsToSelector:@selector(tableView:titleForHeaderInSection:)]){
         return [self.sDataSource tableView:tableView titleForFooterInSection:section] ;
     }
+    if(self.models.count == 0) return nil ;
     id model = self.models[section];
     if([model isKindOfClass:[NSDictionary class]]){
         id title = [model objectForKey:kGroupFooderTitle] ;
