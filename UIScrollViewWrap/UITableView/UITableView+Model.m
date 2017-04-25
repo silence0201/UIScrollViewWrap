@@ -395,13 +395,6 @@ static NSString *const cellIdentifier = @"CellID" ;
     return nil ;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self.sDelegate respondsToSelector:@selector(tableView:estimatedHeightForRowAtIndexPath:)]){
-        return [self.sDelegate tableView:tableView estimatedHeightForRowAtIndexPath:indexPath] ;
-    }
-    return 0.0f ;
-}
-
 - (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([self.sDelegate respondsToSelector:@selector(tableView:editActionsForRowAtIndexPath:)]){
         return [self.sDelegate tableView:tableView editActionsForRowAtIndexPath:indexPath] ;
