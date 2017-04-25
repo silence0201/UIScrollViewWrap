@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SIScrollViewWrap"
-  s.version      = "1.0.3"
+  s.version      = "1.0.4"
   s.summary      = "ScrollViewWrap With Model"
   s.description  = <<-DESC
   						        A ScrollViewWrap With Model
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Silence" => "374619540@qq.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/silence0201/UIScrollViewWrap.git", :tag => "1.0.3" }
+  s.source       = { :git => "https://github.com/silence0201/UIScrollViewWrap.git", :tag => "1.0.4" }
 
   s.subspec 'UITableView' do |ss|
     ss.source_files = 'UIScrollViewWrap/{UITableView,Common}/**/*.{h,m}'
