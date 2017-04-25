@@ -154,13 +154,15 @@ static NSString *const cellIdentifier = @"CellID" ;
 #pragma mark >>>>>>>> 设置数据源 <<<<<<<<
 // 设置数据源
 - (void)setModels:(NSMutableArray *)models {
-    NSMutableArray *array = models ;
-    if([models isKindOfClass:[NSArray class]]){
-        array = [NSMutableArray arrayWithArray:models] ;
+    if (![self isMemberOfClass:NSClassFromString(@"UIPickerTableView")]) {
+        NSMutableArray *array = models ;
+        if([models isKindOfClass:[NSArray class]]){
+            array = [NSMutableArray arrayWithArray:models] ;
+        }
+        self.dataSource = self ;
+        self.delegate = self ;
+        [self si_quickAssociateValue:array withKey:&modelskey] ;
     }
-    self.dataSource = self ;
-    self.delegate = self ;
-    [self si_quickAssociateValue:array withKey:&modelskey] ;
 }
 
 - (NSMutableArray *)models {
